@@ -58,3 +58,17 @@ If hosted using GitHub Pages, visit:
 ## 📄 License
 
 This project is created for educational purposes.
+
+## 📸 Screenshots
+
+![Login Page](screenshots/login.png)
+![Register Page](screenshots/register.png)
+![Login Page](screenshots/login1.png)
+![Home Page](screenshots/home.png)
+![Home Page](screenshots/home1.png)
+![Appointment Page](screenshots/appointment.png)
+![Appointment1 Page](screenshots/appointment1.png)
+![About Page](screenshots/about.png)
+![Services Page](screenshots/services.png)
+![Contact Page](screenshots/contact.png)
+![Contact Page](screenshots/contact1.png)
