@@ -71,4 +71,4 @@ This project is created for educational purposes.
 ![About Page](screenshots/about.png)
 ![Services Page](screenshots/services.png)
 ![Contact Page](screenshots/contact.png)
-![Contact Page](screenshots/contact1.png)
+![Contact Page](screenshots/contact_us.png)
