@@ -25,8 +25,8 @@ It is developed as a web-based project using **HTML** and **CSS**.
 
 ## 🛠️ Technologies Used
 
-- HTML5  
-- CSS3  
+- HTML 
+- CSS 
 - Font Awesome  
 
 ---
@@ -50,8 +50,8 @@ If hosted using GitHub Pages, visit:
 
 ## 👩‍💻 Author
 
-- Name: Your Name  
-- GitHub: https://github.com/your-username
+- Name: Shaksarani Dharmasena  
+- GitHub: https://github.com/sammadharmasena-eng
 
 ---
 
