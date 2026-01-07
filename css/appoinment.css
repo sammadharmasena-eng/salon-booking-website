@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== HEADER ===== */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    z-index: 1000;
+}
+
+.logo{
+    width: 90px;
+}
+
+.nav-area{
+    list-style: none;
+}
+
+.nav-area li{
+    display: inline-block;
+    margin-left: 18px;
+}
+
+.nav-area li a{
+    text-decoration: none;
+    color: #d63384;
+    font-weight: 600;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn{
+    padding: 10px 28px;
+    background: linear-gradient(135deg,#e84393,#9b59b6);
+    color: #fff !important;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout-btn:hover{
+    background: linear-gradient(135deg,#9b59b6,#e84393);
+    transform: scale(1.05);
+}
+
+/* ===== MAIN TOPIC ===== */
+.home{
+    height: 40vh;
+    background: url("../Photo/appoinment.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding-top: 80px;
+}
+
+.main-topic{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-topic .headline{
+    font-size: 50px;
+    font-weight: bold;
+    color: #111;
+}
+
+.main-topic .subline{
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* ===== FORM ===== */
+.contact-form{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form .container{
+    max-width: 500px;
+    width: 100%;
+    background: #f0f0f0;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.container .title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 40px;
+    background: #9b59b6;
+    border-radius: 2px;
+}
+
+.user-details .input-box{
+    margin-bottom: 15px;
+}
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input,
+.user-details .input-box textarea{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box textarea:focus{
+    border-color: #9b59b6;
+}
+
+form .button input{
+    width: 50%;
+    padding: 10px 0;
+    margin-left: 25%;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg,#e84393,#9b59b6);
+    color: #fff;
+    transition: 0.3s;
+}
+
+form .button input:hover{
+    transform: scale(1.05);
+}
+
+
+/* ===== GO BACK BUTTON ===== */
+.go-back{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.go-back-btn{
+    padding: 12px 30px;
+    background: linear-gradient(135deg,#7f7479,#141215);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: right;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.go-back-btn:hover{
+    background: linear-gradient(135deg,#9b59b6,#e84393);
+    transform: scale(1.08);
+}
+
+
+
+
+
+
+/* ===== FOOTER ===== */
+footer{
+    background: #111;
+    padding: 50px 100px;
+    color: #fff;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .sec{
+    margin-bottom: 30px;
+    width: 30%;
+}
+
+footer .sec h2{
+    margin-bottom: 15px;
+    position: relative;
+}
+
+footer .sec h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+
+footer p,
+footer a{
+    color: #aaa;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer .sci{
+    display: flex;
+    margin-top: 10px;
+}
+
+footer .sci li{
+    list-style: none;
+    margin-right: 10px;
+}
+
+footer .sci li a{
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+footer .sci li a:hover{
+    background: #e84393;
+}
+
+footer .quicklinks ul li a:hover,
+footer .contact .info li a:hover{
+    color: #fff;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="CSS/login.css">
+</head>
+<body>
+
+<header>
+    <img class="logo" src="Photo/logo.png" alt="Logo">
+    <nav>
+        <ul class="nav-area">
+             <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact us</a></li> 
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="title">Login</div>
+
+    <form id="loginForm">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" id="loginEmail" required>
+            </div>
+        </div>
+
+        <p id="errorMsg" style="color:red;"></p>
+
+        <div class="login-btn">
+            <input type="submit" value="Login">
+        </div>
+
+        <div class="login-text">
+            <p>Don’t have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </form>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let errorMsg = document.getElementById("errorMsg");
+    errorMsg.innerText = "";
+
+    let email = document.getElementById("loginEmail").value.trim();
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    if(users.length === 0){
+        errorMsg.innerText = "Please register first!";
+        return;
+    }
+
+    let found = users.find(user => user.email === email);
+
+    if(found){
+        alert("Login Successful!");
+        window.location.href = "home.html";
+    }else{
+        errorMsg.innerText = "Email not registered!";
+    }
+});
+</script>
+
+</body>
+</html>

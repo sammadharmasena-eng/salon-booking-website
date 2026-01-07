@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact us</title>
+
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <script src="assets/fontawesome/js/all.min.js"></script>
+</head>
+<body>
+
+<header>
+    <img class="logo" src="Photo/logo.png" alt="Salon Logo">
+
+    <nav>
+        <ul class="nav-area">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li>
+                <a href="login.html" class="logout-btn">Logout</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="main-topic">
+    <h1 class="headline">Contact Us</h1>
+</div>
+
+<section class="home"></section>
+
+<section class="contact-form">
+    <div class="details">
+        <div class="time"></div>
+
+        <div class="container">
+            <div class="title">Contact us</div>
+
+            <!-- FORM -->
+            <form id="contactForm">
+
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your full name" name="firstName" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="email" placeholder="Enter your email" name="email" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Subject</span>
+                        <input type="text" placeholder="Enter your subject" name="subject" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Message</span>
+                        <textarea placeholder="Write the message" name="message" cols="30" rows="5" required></textarea>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Submit">
+                </div>
+
+                <!-- SUCCESS MESSAGE -->
+                <div id="successMessage" style="display:none; color: green; margin-top: 15px; font-weight: bold;">
+                    Your message has been sent successfully!
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+
+        <div class="sec aboutus">
+            <h2>About Us</h2>
+            <p>
+                Our main focus is on quality and hygiene. Our Parlour is well equipped
+                with advanced technology equipments and provides best quality services.
+            </p>
+
+            <ul class="sci">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="sec quicklinks">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="sec contact">
+            <h2>Contact Info</h2>
+            <ul class="info">
+                <li><i class="fa fa-map-marker"></i> NEW TOWN, RATHNAPURA</li>
+                <li><i class="fa fa-phone"></i> 011-3645221</li>
+                <li><i class="fa fa-envelope"></i> sunstyle@gmail.com</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Sunstyle Beauty Salon | All Rights Reserved</p>
+    </div>
+</footer>
+
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // prevent page reload
+
+        document.getElementById("successMessage").style.display = "block";
+
+        this.reset(); // clear form
+    });
+</script>
+
+</body>
+</html>

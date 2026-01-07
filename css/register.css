@@ -1,0 +1,171 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body background */
+body{
+    min-height: 100vh;
+    background-image: url("../Photo/salon.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    background:#ece7e7;
+}
+
+.logo{
+    width: 100px;
+    height:100px ;
+}
+
+.nav-area{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-area li a{
+    color: rgb(280, 31, 171);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-area li a:hover{
+    color: #100f0e;
+}
+
+/* Register container */
+.container{
+    max-width: 750px;
+    margin: 50px auto;
+    background: rgba(83, 82, 83, 0.95);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Title */
+.container .title{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #be1577;
+}
+
+/* User details */
+.user-details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box .details{
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.input-box input{
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus{
+    border-color: #3498db;
+}
+
+/* Gender section */
+.gender-details{
+    margin-top: 25px;
+}
+
+.gender-title{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.gender-details label{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Error message */
+#errorMsg{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Button */
+.button{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.button input{
+    width: 200px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #f39bd8, #bf219a);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button input:hover{
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+/* Login text */
+.login-text{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-text a{
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-text a:hover{
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    .user-details{
+        grid-template-columns: 1fr;
+    }
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+    }
+}

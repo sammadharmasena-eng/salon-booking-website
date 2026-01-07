@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="CSS/register.css">
+</head>
+<body>
+
+<header>
+    <img class="logo" src="Photo/logo.png" alt="Logo">
+    <nav>
+        <ul class="nav-area">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact us</a></li> 
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="title">Register Here</div>
+
+    <form id="registerForm">
+        <div class="user-details">
+
+            <div class="input-box">
+                <span class="details">First Name</span>
+                <input type="text" id="firstName" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type="text" id="lastName" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" id="phone" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">NIC</span>
+                <input type="text" id="nic" required>
+            </div>
+
+        </div>
+
+        <div class="gender-details">
+            <span class="gender-title">Gender</span><br><br>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Other"> Prefer not to say</label>
+        </div>
+
+        <p id="errorMsg" style="color:red;"></p>
+
+        <div class="button">
+            <input type="submit" value="Register">
+        </div>
+
+        <div class="login-text">
+            <p>You already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </form>
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let errorMsg = document.getElementById("errorMsg");
+    errorMsg.innerText = "";
+
+    let email = document.getElementById("email").value.trim();
+    let gender = document.querySelector('input[name="gender"]:checked');
+
+    if(!gender){
+        errorMsg.innerText = "Please select gender!";
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let exist = users.find(user => user.email === email);
+    if(exist){
+        errorMsg.innerText = "Email already registered!";
+        return;
+    }
+
+    users.push({
+        firstName: firstName.value,
+        lastName: lastName.value,
+        email: email,
+        phone: phone.value,
+        nic: nic.value,
+        gender: gender.value
+    });
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Registration Successful!");
+    window.location.href = "login.html";
+});
+</script>
+
+</body>
+</html>
